@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f4e6; /* Light green background */
+  text-align: center;
+}
+
+/* Form Section */
+#analysis {
+  background: #f8fff4; /* Very light green background */
+  padding: 30px;
+  margin: 50px auto;
+  width: 50%;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels */
+form label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  display: block;
+  color: #2f5437; /* Dark green */
+}
+
+/* File Upload Inputs */
+input[type="file"] {
+  padding: 8px;
+  border: 2px solid #2f5437;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+  background-color: #e0f2e0;
+  border-color: #4c794c;
+}
+
+/* Upload Button */
+#detect-deforestation {
+  background: #2f5437;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+#detect-deforestation:hover {
+  background: #1e3a24;
+  transform: scale(1.05);
+}
+
+/* Image Display */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-container img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
+  border: 2px solid #4c794c;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+nav {
+  background-color: #2f5437; /* Dark Green */
+  padding: 10px 0;
+  display: flex;
+  justify-content: center; /* Centers the nav bar */
+}

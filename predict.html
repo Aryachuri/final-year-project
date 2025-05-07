@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSTM Time Series Forecasting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylep.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+          
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="">Prediction</a></li>
+            <li><a href="map.html">Map</a></li>
+        </ul>
+
+        
+      </nav>
+
+    
+      
+<section id="predict">
+    <h1>LSTM Time Series Forecasting</h1>
+
+    <form method="post">
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            {% for value in country_options %}
+                <option value="{{ value }}">{{ value }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="subnational1">Subnational1:</label>
+        <select name="subnational1" id="subnational1">
+            {% for value in subnational1_options %}
+                <option value="{{ value }}">{{ value }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="threshold">Threshold:</label>
+        <select name="threshold" id="threshold">
+            {% for value in threshold_options %}
+                <option value="{{ value }}">{{ value }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</section>
+    {% if prediction_graph %}
+        <h2>LSTM Prediction</h2>
+        <img src="data:image/png;base64,{{ prediction_graph }}" alt="LSTM Prediction">
+    {% endif %}
+
+    {% if not prediction_graph %}
+        <p>No prediction available. Please select a category and submit.</p>
+    {% endif %}
+
+</body>
+</html> 
+ 
+
+
+
+ 

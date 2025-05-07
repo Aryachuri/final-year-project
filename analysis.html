@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis - Forest Protection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylea.css') }}">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="">Analysis</a></li>
+      <li><a href="predict.html">Prediction</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+  </nav>
+
+  <section id="analysis">
+    <h1>Upload Images for Deforestation Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="past_image">Past Image:</label>
+        <input type="file" name="past_image" id="past_image" required><br><br>
+
+        <label for="current_image">Current Image:</label>
+        <input type="file" name="current_image" id="current_image" required><br><br>
+
+        <button type="submit" id="detect-deforestation">Detect Deforestation</button>
+    </form>
+
+    {% if result is not none %}
+        <div class="result">
+            <p><strong>Deforestation Events Detected:</strong> {{ result }}</p>
+        </div>
+    {% endif %}
+
+
+    {% if past_file and current_file %}
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='uploads/' + past_file) }}" alt="Past Image">
+        <img src="{{ url_for('static', filename='uploads/' + current_file) }}" alt="Current Image"> 
+    </div>
+ 
+    {% endif %}
+  </section>
+
+</body>
+</html>

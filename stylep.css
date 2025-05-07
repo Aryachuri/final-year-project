@@ -1,0 +1,155 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2f5437; /* Dark Green */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Centers the nav bar */
+}
+
+/* Centering Nav Items */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Main Section Styling */
+#predict {
+    background-color: white;
+    width: 90%; /* Adjust width to fit */
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Makes form and results side by side */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Form Styling */
+.forecasting-form {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 40%; /* Adjust form width */
+}
+
+/* Reduce input sizes */
+.forecasting-form select,
+.forecasting-form button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Adjust Button Styling */
+button {
+    background-color: #2f5437;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #24422b;
+}
+
+/* Graph & Prediction Display */
+.graph-container {
+    width: 55%; /* Adjust graph width */
+    max-height: 400px; /* Prevents overflow */
+    overflow: hidden;
+    text-align: center;
+}
+
+.graph-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Prediction Message */
+p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+
+/* Basic styles for the login button */
+.login-button {
+    background-color: white; /* Indigo background color */
+    color: brown; /* Light text color */
+    width: 20%; /* Full width */
+    padding: 1rem; /* Vertical padding */
+    border-radius: 0.75rem; /* Rounded corners */
+    font-weight: 600; /* Bold text */
+    display: flex; /* Flexbox for aligning contents */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.login-button:hover {
+    background-color: lightgreen; /* Darker indigo on hover */
+}
+
+/* Icon inside the button */
+.login-icon {
+    width: 1.5rem; /* Icon width */
+    height: 1.5rem; /* Icon height */
+    margin-left: -0.5rem; /* Negative margin to bring icon closer to text */
+}
+
+/* Spacing between the icon and text */
+.login-text {
+    margin-left: 0.75rem; /* Spacing between icon and text */
+}
+
+/* Focus styling for accessibility */
+.login-button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5); /* Add focus shadow */
+}
